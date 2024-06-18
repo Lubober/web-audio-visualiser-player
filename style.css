@@ -52,7 +52,7 @@ body{
 .drop-label{
     position: absolute;
     z-index: -1;
-    font-size: 6vi;
+    font-size: 5vi;
     font-weight: 900;
     height: 100px;
     transition: 0.5s;
@@ -124,6 +124,7 @@ body{
 h1{
     font: inherit;
     font-size: 7vi;
+    word-break: break-all;
 }
 
 
