@@ -52,7 +52,7 @@ body{
 .drop-label{
     position: absolute;
     z-index: -1;
-    font-size: 7vi;
+    font-size: 6vi;
     font-weight: 900;
     height: 100px;
     transition: 0.5s;
