@@ -1,0 +1,161 @@
+:root{
+    --outline-color:rgba(90, 0, 91, 1)
+}
+
+@keyframes start-animation {
+    0%{
+        transform: translateY(-100px) scale(0.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+
+}
+body{
+    background-image: url('./files/bg.jpg');
+    background-size: 120vw 200vh;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--outline-color);
+    
+}
+
+
+.drop-label{
+    position: absolute;
+    z-index: -1;
+    font-size: 60px;
+    font-weight: 900;
+    height: 100px;
+    transition: 0.5s;
+}
+.dropZone:hover~.drop-label::after{
+    content: "(or click to choose file)";
+    font-size:medium;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: appear 0.5s;
+}
+
+
+
+
+.drop-file-container{
+    animation: start-animation 1s;
+    width:900px;
+    height: 500px;
+    border: 3px solid var(--outline-color);
+    transition: 0.4s;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.on-drag{
+    border-style: dashed;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.397);
+
+}
+
+[name= "audiodropdown"]{
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    color: #35023b00;
+    background: #35023b00;
+    opacity: 0;
+    cursor: pointer; 
+}
+
+/* PHASE 2 */
+.waveform-container{
+    width:90%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2px;
+    
+}
+.wave{
+    width:100%;
+    background: rgba(245, 245, 245, 0.342);
+    transition: 0.2s;
+    
+    /* min-height: 4px; */
+
+}
+.title-container{
+    width: max-content;
+    height: max-content;
+}
+h1{
+    font: inherit;
+    font-size: 50px;
+}
+
+
+#play-btn,.play-btn{
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+
+.playback-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40vw;
+}
+.time{
+    color: white;
+    font-size: 40px;
+}
+
+
+
+
+
+
+/* HIDE ELEMENTS */
+.no-display{
+    display: none;
+}
+
+
+
