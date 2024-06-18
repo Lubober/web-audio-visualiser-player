@@ -8,3 +8,4 @@ The file uses HTML, CSS and vanilla javascript
 The "AudioContext" interface is used for audio processing
 The height as well as the colour of bars is dependent on the loudness of their frequencies
 
+It is a basic project with no intent of scalability, showcasing my programming abilities as well as my knowledge of front end
